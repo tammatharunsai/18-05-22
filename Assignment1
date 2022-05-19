@@ -1,0 +1,19 @@
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        n=len(nums)
+        if n==0:
+            return 0
+        count=0
+        dic={}
+        currsum=0
+        for i in range(n):
+            currsum+=nums[i]
+            if(currsum==k):
+                count+=1
+            if(currsum-k in dic):
+                count+=dic[currsum-k]
+            if(currsum in dic):
+                dic[currsum]+=1
+            else:
+                dic[currsum]=1
+        return count
