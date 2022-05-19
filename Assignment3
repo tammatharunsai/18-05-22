@@ -1,0 +1,21 @@
+def subarray(arr,n):
+    for i in range(n):
+        currsum=arr[i]
+        j=i+1 
+        while j<=n:
+            if currsum==sum1:
+                print("sum found between indexes")
+                print(i,j-1)
+                return 1 
+            if currsum > sum1 or j==n:
+                break
+            currsum=currsum+arr[j]
+            j+=1 
+    print("No sub array found")
+    return 0
+print("enter array elements")
+arr=input()
+n=len(arr)
+print("enter sum")
+sum1=input()
+subarray(arr,n)
