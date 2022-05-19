@@ -1,0 +1,15 @@
+def sublists(n,sum1):
+    for i in range(len(n)):
+        currlist = 0
+        for j in range(i, len(n)):
+            currlist += n[j]
+            if currlist == sum1:
+                print(n[i:j+1])
+
+print("enter array elements")
+arr=input()
+n=len(arr)
+print("enter sum")
+sum1=input()
+ 
+sublists(n,sum1)
